@@ -1,0 +1,66 @@
+/* *{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container{
+    width: 100vw;
+    max-width: 100vh;   
+}
+.navbar{
+    width: 100vw;
+    display: flex ;
+    align-items: center;
+    justify-content: space-between;
+    background-color: beige;
+} */
+
+/* .logo{
+    width: 160px;
+    cursor: pointer;
+} */
+nav > div>div> div >ul{
+    flex: 1;
+    list-style:none;
+    text-align: center;
+}
+nav > div>div> div >ul >li{
+    font-size: 18px;
+}
+nav > div>div> div >ul >li>a{
+    color: black;
+    display: inline-block;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+.toggle-icon{
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px ;
+}
+ nav > div >div> div> form{
+    display: flex;
+    align-items: center;
+    background-color: rgb(41, 41, 41);
+    padding:0 30px;
+    border-radius: 50px;
+    justify-content: space-between;
+}
+nav > div >div> div> form>input{
+    padding: 6px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: rgb(212, 212, 212);
+    font-size: 18px;
+    max-width: 100%;
+}
+nav > div >div> div>form>input::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+nav > div >div> div> form>img{
+    width: 25px;
+    cursor: pointer;
+}
