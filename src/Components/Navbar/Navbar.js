@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ankitaImage from "../Card/ankita.jpg";
 import logo_light from "../../Assests/logo-black.png";
 import logo_dark from "../../Assests/logo-white.png";
@@ -101,7 +101,10 @@ const Navbar = ({username, email , id }) => {
                   }
               </div> */}
             <div>
-              <a class="navbar-brand" style={{display:"flex", alignItems: "center"}} href="#">
+              <Link to='/profile'>
+
+           
+              {/* <a class="navbar-brand" style={{display:"flex", alignItems: "center"}} href="#"> */}
                 <img
                   src={ankitaImage}
                   style={{
@@ -111,7 +114,8 @@ const Navbar = ({username, email , id }) => {
                     marginLeft:"30px",
                   }}
                 />
-              </a>
+                   </Link>
+              {/* </a> */}
             </div>
           </div>
         </div>

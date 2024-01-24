@@ -54,10 +54,9 @@ const Header = () => {
     <header className="bg-blue-500 text-white py-4">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-lg font-bold">
-          Campus Placement & Training Portal
+          Campus Placement Information  & Training Portal
         </Link>
-
-        {isMobile ? (
+        {/* {isMobile ? (
           <div>
             <button
               onClick={handleToggleMobileNav}
@@ -111,7 +110,7 @@ const Header = () => {
               Register
             </Link>
           </nav>
-        )}
+        )} */}
       </div>
     </header>
   );

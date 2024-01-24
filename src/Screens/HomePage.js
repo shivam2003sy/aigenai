@@ -12,9 +12,6 @@ const HomePage = () => {
   return (
     <div>
       <Navbar 
-        // username={user.username}
-        // email={user.email}
-        // id={user.id}
     />
       <Posts />
     </div>
