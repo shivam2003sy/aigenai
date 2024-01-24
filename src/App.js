@@ -33,11 +33,13 @@ function App() {
   const [authenticated, setAuthenticated] = useState(false);
 
   return (
-    <AuthProvider>
-      <RouterProvider router={router}>
+  
+      <RouterProvider router={router} 
+      // fallbackElement={<SpinnerOfDoom />}
+      >
       
       </RouterProvider>
-    </AuthProvider>
+  
   );
 }
 

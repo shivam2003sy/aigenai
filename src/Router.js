@@ -2,37 +2,21 @@
 import * as React from "react";
 import {
     createBrowserRouter,
+    redirect,
 } from "react-router-dom";
 import Login from "./Components/LoginSignup/Login";
 import Home from "./Screens/Home/Home";
 import Signup from "./Components/LoginSignup/Signup";
 import HomePage from "./Screens/HomePage";
 import ErrorPage from "./Components/error-page";
-import { Navigate } from "react-router-dom";
-
+// interview
 import InterviewPlatform from "./Screens/InterviewPlatform/InterviewingPlatfom";
-// redux 
-import { useDispatch } from "react-redux";
-import { loadUser } from "./actions/authActions";
-import { useEffect } from "react";
-import { useSelector } from "react-redux";  
+import LobbyScreen from "./Screens/InterviewPlatform/videocall/LobbyScreen";
+import RequireAuth from "./utils/RequireAuth";
 
 
-export const RequireAuth = ({ children }) => {
-   
-    const dispatch = useDispatch();
-    useEffect(() => {
-     dispatch(loadUser());
-    }
-    , []);
-    const auth = useSelector(state => state.auth);
-    console.log("auth" ,  auth);
-    if (!auth.isAuthenticated) {
-        return <Navigate to="/login" />;
-    }
 
-    return children;
-};
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -42,10 +26,17 @@ const router = createBrowserRouter([
     {
         path: "platform",
         element : <InterviewPlatform/>,
+       
+    },
+    {
+        path: "lobby",
+        element :<LobbyScreen/>,
+
     },
     {
         path: "/login",
-        element: <Login />,
+        element:<Login />,
+       
     },
     {
         path: "/register",
@@ -54,7 +45,6 @@ const router = createBrowserRouter([
     {
         path: "/dashboard",
         element: <RequireAuth><HomePage /></RequireAuth>,
-        // element: <HomePage />,
     }
 
 ]);
